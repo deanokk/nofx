@@ -46,6 +46,9 @@ web/node_modules/
 node_modules/
 web/dist/
 web/.vite/
+web/e2e/.auth/
+web/test-results/
+web/playwright-report/
 
 # ESLint 临时报告文件（调试时生成，不纳入版本控制）
 eslint-*.json
