@@ -1090,6 +1090,13 @@ export const translations = {
       tokenExceedWarning: 'Token estimate exceeds 128K. AI requests may fail for some models.',
       tokenEstimating: 'Estimating...',
       tokenTooltip: 'Based on 200K context',
+      nlGenerate: 'AI Generate Strategy',
+      nlGenerateDesc: 'Describe your trading strategy in natural language. AI will generate a complete configuration for you to review and edit.',
+      nlGenerateBtn: 'Generate',
+      nlGenerating: 'AI is generating your strategy...',
+      nlExplanation: 'AI Interpretation',
+      strategyGenerated: 'Configuration applied to form. Review and save when ready.',
+      nlError: 'Generation failed',
     },
 
     // Metric Tooltip
@@ -2394,6 +2401,13 @@ export const translations = {
       tokenExceedWarning: 'Token 估算超过 128K，部分模型请求可能失败',
       tokenEstimating: '预估中...',
       tokenTooltip: '基于 200K 上下文计算',
+      nlGenerate: 'AI 生成策略',
+      nlGenerateDesc: '用自然语言描述你的交易策略，AI 将生成完整配置供你审核和修改。',
+      nlGenerateBtn: '生成',
+      nlGenerating: 'AI 正在生成策略配置...',
+      nlExplanation: 'AI 解读',
+      strategyGenerated: '配置已填入表单，请审核后保存。',
+      nlError: '生成失败',
     },
 
     // Metric Tooltip
@@ -3500,6 +3514,13 @@ export const translations = {
       tokenExceedWarning: 'Estimasi token melebihi 128K. Permintaan AI mungkin gagal untuk beberapa model.',
       tokenEstimating: 'Mengestimasi...',
       tokenTooltip: 'Berdasarkan konteks 200K',
+      nlGenerate: 'AI Generate Strategi',
+      nlGenerateDesc: 'Deskripsikan strategi trading Anda dalam bahasa alami. AI akan menghasilkan konfigurasi lengkap untuk Anda tinjau dan edit.',
+      nlGenerateBtn: 'Generate',
+      nlGenerating: 'AI sedang menghasilkan strategi...',
+      nlExplanation: 'Interpretasi AI',
+      strategyGenerated: 'Konfigurasi diterapkan ke form. Tinjau dan simpan saat siap.',
+      nlError: 'Gagal generate',
     },
 
     // Metric Tooltip

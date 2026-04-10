@@ -38,6 +38,7 @@ import { RiskControlEditor } from '../components/strategy/RiskControlEditor'
 import { PromptSectionsEditor } from '../components/strategy/PromptSectionsEditor'
 import { PublishSettingsEditor } from '../components/strategy/PublishSettingsEditor'
 import { GridConfigEditor, defaultGridConfig } from '../components/strategy/GridConfigEditor'
+import { NLStrategyGenerator } from '../components/strategy/NLStrategyGenerator'
 import { TokenEstimateBar } from '../components/strategy/TokenEstimateBar'
 import { DeepVoidBackground } from '../components/common/DeepVoidBackground'
 import { t } from '../i18n/translations'
@@ -893,6 +894,24 @@ export function StrategyStudioPage() {
                     </button>
                   </div>
                 </div>
+              )}
+
+              {/* NL Strategy Generator */}
+              {!selectedStrategy?.is_default && (
+                <NLStrategyGenerator
+                  onConfigGenerated={(config, name, desc) => {
+                    setEditingConfig(config)
+                    if (name) setSelectedStrategy(prev => prev ? { ...prev, name } : prev)
+                    if (desc) setSelectedStrategy(prev => prev ? { ...prev, description: desc } : prev)
+                    setHasChanges(true)
+                  }}
+                  aiModels={aiModels}
+                  selectedModelId={selectedModelId}
+                  onModelChange={setSelectedModelId}
+                  language={language}
+                  token={token}
+                  disabled={selectedStrategy?.is_default}
+                />
               )}
 
               {/* Config Sections */}
