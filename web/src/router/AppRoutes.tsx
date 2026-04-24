@@ -23,6 +23,7 @@ import { LandingPage } from '../pages/LandingPage'
 import { BeginnerOnboardingPage } from '../pages/BeginnerOnboardingPage'
 import { DataPage } from '../pages/DataPage'
 import { SettingsPage } from '../pages/SettingsPage'
+import { PaymentSettingsPage } from '../pages/PaymentSettingsPage'
 import { StrategyMarketPage } from '../pages/StrategyMarketPage'
 import { StrategyStudioPage } from '../pages/StrategyStudioPage'
 import { TraderDashboardPage } from '../pages/TraderDashboardPage'
@@ -462,6 +463,18 @@ export function AppRoutes() {
             <AppChrome currentPage="data" showFooter={false}>
               <DataPage />
             </AppChrome>
+          }
+        />
+        <Route
+          path={ROUTES.payments}
+          element={
+            isAuthenticated ? (
+              <AppChrome currentPage="payments" showFooter={false} wrapInMain={false}>
+                <PaymentSettingsPage />
+              </AppChrome>
+            ) : (
+              <Navigate to={ROUTES.login} replace />
+            )
           }
         />
         <Route

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Settings, Wallet } from 'lucide-react'
 import { t, type Language } from '../../i18n/translations'
 import { OFFICIAL_LINKS } from '../../constants/branding'
 import {
@@ -108,7 +108,15 @@ export default function HeaderBar({
                 path: string
                 label: string
                 requiresAuth: boolean
+                prominent?: boolean
               }[] = [
+                {
+                  page: 'payments',
+                  path: ROUTES.payments,
+                  label: language === 'zh' ? '支付' : 'Payments',
+                  requiresAuth: true,
+                  prominent: true,
+                },
                 {
                   page: 'data',
                   path: ROUTES.data,
@@ -180,12 +188,21 @@ export default function HeaderBar({
                 <button
                   key={tab.page}
                   onClick={() => handleNavClick(tab)}
-                  className={`text-sm font-bold transition-all duration-300 relative focus:outline-2 focus:outline-yellow-500 px-3 py-2 rounded-lg
-                    ${resolvedCurrentPage === tab.page ? 'text-nofx-gold' : 'text-nofx-text-muted hover:text-nofx-gold'}`}
+                  className={`text-sm font-bold transition-all duration-300 relative focus:outline-2 focus:outline-yellow-500 px-3 py-2 rounded-lg flex items-center gap-2
+                    ${
+                      tab.prominent
+                        ? resolvedCurrentPage === tab.page
+                          ? 'bg-nofx-gold text-black shadow-[0_10px_30px_rgba(240,185,11,0.28)]'
+                          : 'border border-nofx-gold/35 bg-nofx-gold/10 text-nofx-gold hover:bg-nofx-gold/18'
+                        : resolvedCurrentPage === tab.page
+                          ? 'text-nofx-gold'
+                          : 'text-nofx-text-muted hover:text-nofx-gold'
+                    }`}
                 >
-                  {resolvedCurrentPage === tab.page && (
+                  {!tab.prominent && resolvedCurrentPage === tab.page && (
                     <span className="absolute inset-0 rounded-lg bg-nofx-gold/15 -z-10" />
                   )}
+                  {tab.prominent ? <Wallet className="h-4 w-4" /> : null}
                   {tab.label}
                 </button>
               ))
@@ -430,7 +447,15 @@ export default function HeaderBar({
                     path: string
                     label: string
                     requiresAuth: boolean
+                    prominent?: boolean
                   }[] = [
+                    {
+                      page: 'payments',
+                      path: ROUTES.payments,
+                      label: language === 'zh' ? '支付' : 'Payments',
+                      requiresAuth: true,
+                      prominent: true,
+                    },
                     {
                       page: 'data',
                       path: ROUTES.data,
@@ -506,8 +531,17 @@ export default function HeaderBar({
                       transition={{ delay: 0.1 + i * 0.05 }}
                       onClick={() => handleMobileNavClick(tab)}
                       className={`text-2xl font-black tracking-tight text-left flex items-center gap-3
-                        ${resolvedCurrentPage === tab.page ? 'text-nofx-gold' : 'text-zinc-500'}`}
+                        ${
+                          tab.prominent
+                            ? resolvedCurrentPage === tab.page
+                              ? 'text-nofx-gold'
+                              : 'text-yellow-200'
+                            : resolvedCurrentPage === tab.page
+                              ? 'text-nofx-gold'
+                              : 'text-zinc-500'
+                        }`}
                     >
+                      {tab.prominent ? <Wallet className="h-5 w-5" /> : null}
                       {resolvedCurrentPage === tab.page && (
                         <motion.div
                           layoutId="active-indicator"
