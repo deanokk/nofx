@@ -831,6 +831,10 @@ export const translations = {
     faqCanNOFXStealFundsAnswer:
       'NOFX is open-source (AGPL-3.0 license) - you can audit all code on GitHub. API keys are stored locally on YOUR machine, never sent to external servers. NOFX only has the permissions you grant via API keys. For maximum safety: use API keys with trading-only permissions (no withdrawal), enable IP whitelist, use a dedicated subaccount.',
 
+    faqForgotPrivateKey: 'I forgot to save my private key during setup. What should I do?',
+    faqForgotPrivateKeyAnswer:
+      'If you log in using Beginner Mode (新手模式): the private key is displayed every time you log in — look for the gold popup showing \'Private key, back it up now.\' You can copy it from there. As long as a private key has been configured, logging in with Beginner Mode will display this prompt. Important: private keys cannot be recovered if lost — there is no \'reset password\' for wallets.',
+
     // ===== FEATURES =====
     faqStrategyStudio: 'What is Strategy Studio?',
     faqStrategyStudioAnswer:
@@ -2146,6 +2150,10 @@ export const translations = {
     faqCanNOFXStealFundsAnswer:
       'NOFX 是开源的（AGPL-3.0 许可）- 您可以在 GitHub 审计所有代码。API 密钥存储在您的机器本地，从不发送到外部服务器。NOFX 只有您通过 API 密钥授予的权限。为最大安全：使用仅交易权限（无提现）的 API 密钥，启用 IP 白名单，使用专用子账户。',
 
+    faqForgotPrivateKey: '注册时忘记保存私钥了怎么办？',
+    faqForgotPrivateKeyAnswer:
+      '如果你使用新手模式登录：每次登录时都会弹出金色提示框，其中「私钥，请立即备份」部分会显示你的私钥，可以直接从那里复制保存。只要配置过私钥，使用新手模式登录都会显示该提示。重要提醒：私钥丢失后无法恢复——钱包没有「找回密码」功能。',
+
     // ===== 功能介绍 =====
     faqStrategyStudio: '什么是策略工作室？',
     faqStrategyStudioAnswer:
@@ -3297,6 +3305,9 @@ export const translations = {
     faqSecurityBestPracticesAnswer: 'Disarankan: 1) Gunakan API key dengan whitelist IP dan izin minimal; 2) Gunakan sub-akun khusus; 3) Aktifkan TRANSPORT_ENCRYPTION; 4) Gunakan HTTPS.',
     faqCanNOFXStealFunds: 'Bisakah NOFX mencuri dana saya?',
     faqCanNOFXStealFundsAnswer: 'NOFX open-source (lisensi AGPL-3.0) - Anda bisa audit semua kode. API key disimpan lokal di mesin ANDA, tidak pernah dikirim ke server eksternal.',
+    faqForgotPrivateKey: 'Saya lupa menyimpan private key saat pendaftaran. Apa yang harus dilakukan?',
+    faqForgotPrivateKeyAnswer:
+      'Jika Anda login menggunakan Mode Pemula (新手模式): private key ditampilkan setiap kali Anda login — cari popup emas yang bertuliskan \'Private key, back it up now.\' Anda bisa menyalinnya dari sana. Selama private key sudah dikonfigurasi, login dengan Mode Pemula akan menampilkan prompt ini. Penting: private key tidak dapat dipulihkan jika hilang — tidak ada fitur \'lupa password\' untuk wallet.',
     faqStrategyStudio: 'Apa itu Strategy Studio?',
     faqStrategyStudioAnswer: 'Strategy Studio adalah pembangun strategi visual untuk konfigurasi: Sumber Koin, Indikator Teknikal, Kontrol Risiko, dan Prompt Kustom. Tanpa coding.',
     faqCompetitionMode: 'Apa itu Mode Kompetisi?',

@@ -280,6 +280,11 @@ export const faqCategories: FAQCategory[] = [
         questionKey: 'faqCanNOFXStealFunds',
         answerKey: 'faqCanNOFXStealFundsAnswer',
       },
+      {
+        id: 'forgot-private-key',
+        questionKey: 'faqForgotPrivateKey',
+        answerKey: 'faqForgotPrivateKeyAnswer',
+      },
     ],
   },
 
